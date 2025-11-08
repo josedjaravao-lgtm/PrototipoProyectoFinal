@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox
+        xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Controller.ClientRegistrationController"
+      prefHeight="350.0" prefWidth="600.0"
+      alignment="TOP_CENTER"
+      spacing="20.0">
+    <padding>
+        <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+    </padding>
+
+    <children>
+
+        <Label text="Formulario de Registro de Cliente">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </Label>
+        <VBox spacing="15" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+        <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+        </padding>
+
+        <GridPane hgap="15" vgap="20">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+
+            <children>
+                <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                       style="-fx-text-fill: #34495e; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <TextField fx:id="nameField"  GridPane.columnIndex="1" GridPane.rowIndex="0"
+                           style="-fx-font-size: 14px; -fx-padding: 8;" promptText="Ingrese el nombre del usuario"/>
+
+                <Label text="Edad:" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                       style="-fx-text-fill: #34495e; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <TextField fx:id="ageField"  GridPane.columnIndex="1" GridPane.rowIndex="1"
+                           style="-fx-font-size: 14px; -fx-padding: 8;" promptText="Ingrese la edad del usuario"/>
+
+                <Label text="Documento (ID):" GridPane.columnIndex="0" GridPane.rowIndex="2"
+                       style="-fx-text-fill: #34495e; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <TextField fx:id="idField"  GridPane.columnIndex="1" GridPane.rowIndex="2"
+                           style="-fx-font-size: 14px; -fx-padding: 8;" promptText="Ingrese el documento del usuario"/>
+
+                <Label text="Correo:" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                       style="-fx-text-fill: #34495e; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <TextField fx:id="mailField"  GridPane.columnIndex="1" GridPane.rowIndex="3"
+                           style="-fx-font-size: 14px; -fx-padding: 8;" promptText="Ingrese el correo del usuario"/>
+
+                <Label text="Teléfono:" GridPane.columnIndex="0" GridPane.rowIndex="4"
+                       style="-fx-text-fill: #34495e; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+                <TextField fx:id="phoneField"  GridPane.columnIndex="1" GridPane.rowIndex="4"
+                           style="-fx-font-size: 14px; -fx-padding: 8;" promptText="Ingrese el telefono del usuario"/>
+            </children>
+        </GridPane>
+
+        <HBox alignment="BOTTOM_RIGHT" spacing="10.0">
+            <children>
+                <Button onAction="#onGoBackButtonClick" text="Regresar al Dashboard" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-cursor: hand; -fx-background-radius: 5;"/>
+
+                <Button onAction="#onRegisterButtonClick" text="Registrar Cliente" defaultButton="true" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-cursor: hand; -fx-background-radius: 5;"/>
+            </children>
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+        </HBox>
+        </VBox>
+    </children>
+</VBox>
