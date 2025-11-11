@@ -37,5 +37,9 @@
          <font>
             <Font size="14.0" />
          </font></Button>
+    <Button onAction="#onCerrarSesion" prefWidth="250.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-cursor: hand; -fx-background-radius: 5;" text="Cerrar Sesión">
+        <font>
+            <Font size="14.0" />
+        </font></Button>
 </VBox>
 </VBox>

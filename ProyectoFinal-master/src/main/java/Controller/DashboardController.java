@@ -32,13 +32,13 @@ public class DashboardController {
             stage.show();
 
 
-
         } catch (IOException e) {
             e.printStackTrace();
             welcomeText.setText("Error al cargar la vista de registro.");
         }
 
     }
+
     @FXML
     protected void onViewClientsButtonClick(ActionEvent event) {
         try {
@@ -61,8 +61,29 @@ public class DashboardController {
     }
 
 
-        @FXML
-        protected void onLoanManagementButtonClick () {
-            welcomeText.setText("Función para gestión de préstamos no implementada aún.");
+    @FXML
+    protected void onLoanManagementButtonClick() {
+        welcomeText.setText("Función para gestión de préstamos no implementada aún.");
+    }
+
+    @FXML
+    protected void onCerrarSesion(ActionEvent event) {
+        try {
+            welcomeText.setText("Cerrando sesion.");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/proyectofinal/Login-view.fxml"));
+
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Clientes y Cuentas");
+            stage.setWidth(800);
+            stage.setHeight(500);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            welcomeText.setText("Error al cargar la vista de usuarios.");
         }
     }
+}
